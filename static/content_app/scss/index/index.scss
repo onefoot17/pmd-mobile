@@ -23,12 +23,26 @@ img {
     width: 100%;
 }
 
-.logo-link,
 .logo {
     display: block;
+    margin: 0 auto;
+    max-width: 172px;
 }
 
-.logo {
-    margin: 0 auto;
-    width: 320px;
+.featured-article{
+    border-bottom: 1px dashed $slate-grey;
+}
+
+.article-excerpt--index,
+.published-date--index{
+    margin-bottom: $margin;
+}
+
+.article-excerpt--index{
+    font-family: $cabincondensed-semibold;
+    color: $dark-grey;
+}
+
+.published-by--index{
+    margin-bottom: $margin / 2;
 }

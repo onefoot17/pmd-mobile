@@ -4,22 +4,22 @@ html, body {
 
 @font-face {
   font-family: "cabincondensed-semibold";
-  src: url("/static/content_app/fonts/cabincondensed-semibold/cabincondensed-semibold.woff2") format("woff2"), url("/static/content_app/fonts/cabincondensed-semibold/cabincondensed-semibold.woff") format("woff");
+  src: url("../fonts/cabincondensed-semibold/cabincondensed-semibold.woff2") format("woff2"), url("../fonts/cabincondensed-semibold/cabincondensed-semibold.woff") format("woff");
 }
 
 @font-face {
   font-family: "millerdisplay-italic";
-  src: url("/static/content_app/fonts/millerdisplay-italic/millerdisplay-italic.woff2") format("woff2"), url("/static/content_app/fonts/millerdisplay-italic/millerdisplay-italic.woff") format("woff");
+  src: url("../fonts/millerdisplay-italic/millerdisplay-italic.woff2") format("woff2"), url("../fonts/millerdisplay-italic/millerdisplay-italic.woff") format("woff");
 }
 
 @font-face {
   font-family: "millerdisplay-regular";
-  src: url("/static/content_app/fonts/millerdisplay-regular/millerdisplay-regular.woff2") format("woff2"), url("/static/content_app/fonts/millerdisplay-regular/millerdisplay-regular.woff") format("woff");
+  src: url("../fonts/millerdisplay-regular/millerdisplay-regular.woff2") format("woff2"), url("../fonts/millerdisplay-regular/millerdisplay-regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "roboto-regular";
-  src: url("/static/content_app/fonts/roboto-regular/roboto-regular.woff2") format("woff2"), url("/static/content_app/fonts/roboto-regular/roboto-regular.woff") format("woff");
+  src: url("../fonts/roboto-regular/roboto-regular.woff2") format("woff2"), url("../fonts/roboto-regular/roboto-regular.woff") format("woff");
 }
 
 p {
@@ -223,12 +223,26 @@ img {
   width: 100%;
 }
 
-.logo-link,
 .logo {
   display: block;
+  margin: 0 auto;
+  max-width: 172px;
 }
 
-.logo {
-  margin: 0 auto;
-  width: 320px;
+.featured-article {
+  border-bottom: 1px dashed #d8d8d8;
+}
+
+.article-excerpt--index,
+.published-date--index {
+  margin-bottom: 8px;
+}
+
+.article-excerpt--index {
+  font-family: "cabincondensed-semibold", Helvetica, Arial, sans-serif;
+  color: #888888;
+}
+
+.published-by--index {
+  margin-bottom: 4px;
 }

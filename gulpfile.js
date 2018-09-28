@@ -3,9 +3,7 @@ var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 
 gulp.task('sass', function () {
-    return gulp.src([
-        'static/content_app/scss/*'
-    ])
+    return gulp.src('static/content_app/scss/styles.scss')
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(gulp.dest('static/content_app/css'));
 });
