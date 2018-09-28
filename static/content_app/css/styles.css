@@ -1,0 +1,234 @@
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+@font-face {
+  font-family: "cabincondensed-semibold";
+  src: url("/static/content_app/fonts/cabincondensed-semibold/cabincondensed-semibold.woff2") format("woff2"), url("/static/content_app/fonts/cabincondensed-semibold/cabincondensed-semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "millerdisplay-italic";
+  src: url("/static/content_app/fonts/millerdisplay-italic/millerdisplay-italic.woff2") format("woff2"), url("/static/content_app/fonts/millerdisplay-italic/millerdisplay-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "millerdisplay-regular";
+  src: url("/static/content_app/fonts/millerdisplay-regular/millerdisplay-regular.woff2") format("woff2"), url("/static/content_app/fonts/millerdisplay-regular/millerdisplay-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "roboto-regular";
+  src: url("/static/content_app/fonts/roboto-regular/roboto-regular.woff2") format("woff2"), url("/static/content_app/fonts/roboto-regular/roboto-regular.woff") format("woff");
+}
+
+p {
+  margin: 0;
+}
+
+i {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+html {
+  margin: 0 auto;
+  max-width: 767px;
+}
+
+body {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+main {
+  box-shadow: 0px 1px 1px 1px #d8d8d8;
+  padding: 10px;
+}
+
+a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+div {
+  display: block;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  background-color: #fed232;
+  height: 48px;
+}
+
+.header-logo {
+  display: block;
+  margin: 0 auto;
+  padding: 13px 0;
+}
+
+.footer {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #262626;
+  padding: 10px;
+}
+
+.footer-logo-container {
+  border-top: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+  margin: 10px 0;
+  padding: 15px 0;
+}
+
+.copyright {
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.copyright span {
+  line-height: 19px;
+}
+
+.footer-logo-postmedia {
+  margin: 0 5px -3px 0;
+}
+
+.privacy-links a {
+  text-decoration: none;
+}
+
+.privacy-links a:not(:last-child):after {
+  content: '|';
+  padding: 0 5px;
+}
+
+article {
+  margin: 0 0 30px;
+}
+
+article a {
+  color: #005E9C;
+}
+
+article .featured-image {
+  margin: 10px 0 20px;
+}
+
+.article-category {
+  color: #005E9C;
+  font-family: "cabincondensed-semibold", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.article-title {
+  font-family: "cabincondensed-semibold", Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  line-height: 32px;
+  margin: 8px 0;
+}
+
+.published-by, .published-date {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.published-date {
+  color: #888888;
+}
+
+.article-content {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  line-height: 26px;
+}
+
+.article-content p {
+  margin: 0 0 10px;
+}
+
+.article-delimiter {
+  background-color: #000000;
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 30px 0 15px;
+  width: 30%;
+}
+
+.amp-ad-container {
+  border-bottom: 1px solid #d8d8d8;
+  margin-bottom: 20px;
+  padding: 0 10px 10px;
+  position: relative;
+  text-align: center;
+}
+
+.delimiter {
+  border-bottom: 1px solid #d8d8d8;
+  display: inline-block;
+  content: '';
+  background-color: #d8d8d8;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 15px;
+  z-index: -1;
+}
+
+.ad-label {
+  background-color: #ffffff;
+  font-family: "roboto-regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #888888;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 13px;
+  padding: 10px;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: .2s all ease-in-out;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html, body, img, a {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  word-break: break-word;
+}
+
+img {
+  width: 100%;
+}
+
+.logo-link,
+.logo {
+  display: block;
+}
+
+.logo {
+  margin: 0 auto;
+  width: 320px;
+}

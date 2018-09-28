@@ -1,0 +1,29 @@
+.amp-ad-container {
+    border-bottom: 1px solid $border;
+    margin-bottom: 20px;
+    padding: 0 10px 10px;
+    position: relative;
+    text-align: center;
+}
+
+.delimiter {
+    border-bottom: 1px solid $border;
+    display: inline-block;
+    content: '';
+    background-color: $border;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 15px;
+    z-index: -1;
+}
+
+.ad-label {
+    background-color: $background;
+    font-family: $ad-callout-text;
+    color: $ad-callout;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 13px;
+    padding: 10px;
+}

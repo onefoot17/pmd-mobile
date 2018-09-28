@@ -1,0 +1,38 @@
+.footer {
+    font-family: $helvetica;
+    background-color: $footer-background;
+    padding: 10px;
+}
+
+.footer-logo-container {
+    border-top: 1px solid $footer-border;
+    border-bottom: 1px solid $footer-border;
+    margin: 10px 0;
+    padding: 15px 0;
+}
+
+.copyright {
+    color: $footer-text;
+    font-size: 11px;
+
+    span {
+        line-height: 19px;
+    }
+}
+
+.footer-logo-postmedia {
+    margin: 0 5px -3px 0;
+}
+
+.privacy-links {
+    a {
+        text-decoration: none;
+
+        &:not(:last-child) {
+            &:after {
+                content: '|';
+                padding: 0 5px;
+            }
+        }
+    }
+}

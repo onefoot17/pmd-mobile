@@ -1,0 +1,51 @@
+// FONTS
+$cabincondensed-semibold: 'cabincondensed-semibold', Helvetica, Arial, sans-serif;
+$millerdisplay-italic: 'millerdisplay-italic', 'times new roman', times, serif;
+$millerdisplay-regular: 'millerdisplay-regular', 'times new roman', times, serif;
+$roboto-regular: 'roboto-regular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$georgia: Georgia, 'Times New Roman', Times, serif;
+$helvetica: Helvetica, Arial, sans-serif;
+
+// FONTS - NATIONAL POST - ARTICLE PAGE
+$article-heading: $cabincondensed-semibold;
+$meta: $helvetica;
+$article-content: $georgia;
+$ad-callout-text: $roboto-regular;
+
+// BASE COLOURS
+$black: #000000;
+$white: #ffffff;
+
+// COLOUR PALETTE - NATIONAL POST
+$yellow-np: #fed232;
+$link-color-np: #005E9C;
+$grey: #262626;
+$darker-grey: #404040;
+$dark-grey: #888888;
+$slate-grey: #d8d8d8;
+
+// MAIN
+$background: $white;
+$link: $link-color-np;
+$border: $slate-grey;
+$ad-callout: $dark-grey;
+
+// HEADER & FOOTER
+$header-background: $yellow-np;
+$footer-background: $grey;
+$footer-text: $white;
+$footer-border: $darker-grey;
+
+// TEXT COLOUR
+$text-dark: $black;
+$text-light: $white;
+
+// ELEMENTS COLORS
+$button-bg: $black;
+$button-hover-bg: $white;
+
+// PAGINATION
+
+// ARTICLE PAGE
+$article-meta: $dark-grey;
+$article-border: $black;
