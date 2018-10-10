@@ -178,6 +178,25 @@
             <section></section>
         </main>
 
+        <amp-analytics type="googleanalytics">
+            <script type="application/json">
+                {
+                    "vars": {
+                        "account": "UA-73836974-1"
+                    },
+                    "triggers": {
+                        "default pageview": {
+                            "on": "visible",
+                            "request": "pageview",
+                            "vars": {
+                                "title": "{{title}}"
+                            }
+                        }
+                    }
+                }
+            </script>
+        </amp-analytics>
+
         <footer class="footer">
             <div class="footer-logo-container">
                 <a href="https://www.postmedia.com/brands" title="Postmedia Network Inc.">
