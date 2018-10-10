@@ -31,6 +31,17 @@ img {
 
 .featured-article{
     border-bottom: 1px dashed $slate-grey;
+    margin-bottom: 0;
+}
+
+article .featured-image--index{
+    margin-top: 0;
+    margin-bottom: $margin * 2;
+}
+
+.article-title--index{
+    margin-top: $margin;
+    margin-bottom: $margin;
 }
 
 .article-excerpt--index,
@@ -45,4 +56,15 @@ img {
 
 .published-by--index{
     margin-bottom: $margin / 2;
+}
+
+.article-page-list-item{
+    clear: both;
+    display: flex;
+    text-decoration: none;
+
+    > *,
+    .article-meta{
+        float: none;
+    }
 }
