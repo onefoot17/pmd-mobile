@@ -309,4 +309,11 @@ img {
             border-bottom: none;
         }
     }
+
+    .sign-up{
+        border-top: 2px dotted $slate-grey;
+        border-bottom: 2px dotted $slate-grey;
+        padding-top: $padding * 2;
+        padding-bottom: $padding * 2;
+    }
 }
