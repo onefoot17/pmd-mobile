@@ -67,11 +67,6 @@ img {
     color: $black;
 }
 
-.article-title--index{
-    margin-top: $margin;
-    margin-bottom: $margin;
-}
-
 .published-by--index{
     margin-bottom: $margin / 2;
 }
@@ -107,6 +102,13 @@ img {
     amp-img{
         float: none;
     }
+
+    .article-title--index{
+        margin-top: $margin;
+        margin-bottom: $margin;
+        max-height: initial;
+        overflow: initial;
+    }
 }
 
 .article-page-list-item:first-child,
@@ -132,6 +134,11 @@ img {
 .article-page-list-item:first-child{
     flex-basis: 100%;
     padding-top: 0;
+
+    .article-title--index{
+        font-size: 28px;
+        line-height: 32px;
+    }
 }
 
 
@@ -278,10 +285,28 @@ img {
         .article-meta{
             padding-top: 0;
             padding-right: $padding * 2;
+            
+        }
+        .article-title--index{
+            font-size: 18px;
+            line-height: 22px;
         }
     }
 
     .published-date--index{
         color: $darker-grey;
+    }
+}
+
+.post-picks{
+    .section-title{
+        color: $link;
+        margin-bottom: $margin;
+    }
+
+    .article-page-list-item{
+        &:nth-last-child(2){
+            border-bottom: none;
+        }
     }
 }
