@@ -6,6 +6,7 @@ $padding: $margin;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    transition: .2s all ease-in-out;
 }
 
 html, body {
@@ -87,19 +88,14 @@ img {
 }
 
 .article-page-list-item{
-    border-bottom: none;
-    padding: 0;
-}
-
-.article-page-list-item > *{
-    border-bottom: none;
-    border-top: 2px dotted $slate-grey;
     clear: both;
     display: flex;
     justify-content: center;
-    padding-top: $padding * 2;
-    padding-bottom: $padding * 2;
     text-decoration: none;
+
+    &:last-child{
+        border-bottom: none;
+    }
 
     > *,
     .article-meta,
@@ -115,8 +111,8 @@ img {
     }
 }
 
-.article-page-list-item:first-child > *,
-.article-page-lists-2col-list .article-page-list-item > *{
+.article-page-list-item:first-child,
+.video-centre-list .article-page-list-item{
     flex-direction: column-reverse;
 
     > *,
@@ -135,8 +131,7 @@ img {
     }
 }
 
-.article-page-list-item:first-child > *{
-    border-top: none;
+.article-page-list-item:first-child{
     flex-basis: 100%;
     padding-top: 0;
 
@@ -146,53 +141,28 @@ img {
     }
 }
 
-.article-page-list-item{
-    &.widget > *,
-    &.widget-bottom-border > *,
-    &.widget-top-border > *{
+
+.articles .article-page-list-item{
+    &:nth-child(3),
+    &:nth-child(4){
         border-bottom: none;
-    }
-
-    &.widget > *{
-        border-top: none;
-        padding-top: 0;
-    }
-
-    &.widget-bottom-border{
-        > *{
-            border-top: none;
-            padding-top: 0;
-        }
-
-        + .article-page-list-item > * {
-            border-top: 1px solid $slate-grey;
-            padding-top: $padding * 4;
-        }
-    }
-
-    &.widget-top-border > *{
-        border-top: 2px dotted $slate-grey;
-    }
-
-    &.widget .sign-up{// For prototype only. Remove for production.
-        padding-top: $padding * 2;
     }
 }
 
 .amp-ad-container--index{
     border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    margin-bottom: $margin * 3;
     width: 100%;
 }
 
 .section-title{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     font-family: $article-heading;
     font-size: 20px;
     line-height: 32px;
+    margin-top: $margin * 2;
     margin-bottom: $margin * 2;
     text-transform: uppercase;
 }
@@ -212,7 +182,11 @@ img {
     padding-left: $padding / 2;
 }
 
-.article-page-lists-2col{
+.video-centre{
+    &.article-page-lists{
+        border-bottom: none;
+    }
+
     .read-more{
         color: $link;
         font-family: $millerdisplay-italic;
@@ -220,7 +194,7 @@ img {
     }
 }
 
-.article-page-lists-2col-list{
+.video-centre-list{
     display: flex;
     flex-wrap: wrap;
 
@@ -228,6 +202,7 @@ img {
         border-bottom: none;
         flex-basis: 50%;
         flex-direction: column-reverse;
+        padding-bottom: 0;
 
         &:nth-of-type(even){
             padding-right: $padding * 2;
@@ -242,7 +217,7 @@ img {
             padding-right: 0;
             padding-left: 0;
 
-            .article-page-lists-2col-play{
+            .video-centre-play{
                 width: 60px;
             }
 
@@ -258,11 +233,6 @@ img {
         &:nth-last-child(1) .article-meta,
         &:nth-last-child(2) .article-meta{
             border-bottom: none;
-        }
-
-        > *{
-            border-top: none;
-            padding-bottom: 0;
         }
     }
 
@@ -281,10 +251,10 @@ img {
     }
 }
 
-.article-page-lists-2col-thumbnail{
+.video-centre-thumbnail{
     position: relative;
 
-    .article-page-lists-2col-play{
+    .video-centre-play{
         width: 30px;
     }
 }
@@ -294,15 +264,16 @@ img {
         font-family: $helvetica;
         font-size: 11px;
         font-weight: 100;
-        margin-bottom: 0;
         text-transform: initial;
     }
 
     .read-more{
         font-size: 13px;
     }
+}
 
-    .article-page-list-item > *{
+.sponsored-list{
+    .article-page-list-item{
         background-color: $slate-grey;
         border-top: 1px solid $dark-grey;
         border-bottom: 1px solid $dark-grey;
@@ -316,7 +287,6 @@ img {
             padding-right: $padding * 2;
             
         }
-        
         .article-title--index{
             font-size: 18px;
             line-height: 22px;
@@ -334,9 +304,16 @@ img {
         margin-bottom: $margin;
     }
 
-    .article-page-list-item > *{
+    .article-page-list-item{
         &:nth-last-child(2){
             border-bottom: none;
         }
+    }
+
+    .sign-up{
+        border-top: 2px dotted $slate-grey;
+        border-bottom: 2px dotted $slate-grey;
+        padding-top: $padding * 2;
+        padding-bottom: $padding * 2;
     }
 }
