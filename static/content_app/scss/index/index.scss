@@ -1,6 +1,8 @@
 // SPACING
 $margin: 6px;
 $padding: $margin;
+$border-dotted: 2px dotted $slate-grey;
+$border-solid: 1px solid $slate-grey;
 
 *, *:before, *:after {
     -moz-box-sizing: border-box;
@@ -13,7 +15,7 @@ html, body {
     height: 100%;
 }
 
-html, body, img, a, section, article, div, h1, h2, p {
+html, body, img, a, section, article, div, h1, h2, h3, p {
     margin: 0;
     padding: 0;
 }
@@ -82,8 +84,13 @@ img {
 }
 
 .article-page-lists{
-    border-bottom: 1px solid $slate-grey;
-    margin-bottom: $margin * 3;
+    border-top: $border-solid;
+    padding-top: $margin * 3;
+
+    &:first-child{
+        border-top: none;
+        padding-top: 0;
+    }
 }
 
 .article-page-list-item{
@@ -93,7 +100,7 @@ img {
 
 .article-page-list-item > *{
     border-bottom: none;
-    border-top: 2px dotted $slate-grey;
+    border-top: $border-dotted;
     clear: both;
     display: flex;
     justify-content: center;
@@ -147,9 +154,13 @@ img {
 }
 
 .article-page-list-item{
+    &.widget{
+        border-top: none;
+    }
+
     &.widget > *,
     &.widget-bottom-border > *,
-    &.widget-top-border > *{
+    &.widget-border-top-dotted > *{
         border-bottom: none;
     }
 
@@ -165,13 +176,13 @@ img {
         }
 
         + .article-page-list-item > * {
-            border-top: 1px solid $slate-grey;
+            border-top: $border-solid;
             padding-top: $padding * 4;
         }
     }
 
-    &.widget-top-border > *{
-        border-top: 2px dotted $slate-grey;
+    &.widget-border-top-dotted > *{
+        border-top: $border-dotted;
     }
 
     &.widget .sign-up{// For prototype only. Remove for production.
@@ -197,26 +208,10 @@ img {
     text-transform: uppercase;
 }
 
-.read-more{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    font-family: $helvetica;
-    font-weight: 100;
-    text-transform: initial;
-}
-
-.read-more-arrow{
-    font-size: 22px;
-    line-height: 28px;
-    padding-left: $padding / 2;
-}
-
-.article-page-lists-2col{
-    .read-more{
+.article-page-lists-1col{
+    .section-title{
         color: $link;
-        font-family: $millerdisplay-italic;
-        font-size: 15px;
+        margin-bottom: $margin;
     }
 }
 
@@ -267,7 +262,7 @@ img {
     }
 
     .article-meta{
-        border-bottom: 2px dotted $slate-grey;
+        border-bottom: $border-dotted;
         padding-bottom: 12px;
     }
 
@@ -289,27 +284,41 @@ img {
     }
 }
 
+.widget{
+    border-top: $border-solid;
+}
+
 .sponsored{
-    .section-title{
+    .sponsored-h3{
+        color: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         font-family: $helvetica;
         font-size: 11px;
         font-weight: 100;
+        line-height: 32px;
         margin-bottom: 0;
+    }
+
+    .sponsored-h3-more{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        font-family: $helvetica;
+        font-size: 13px;
+        font-weight: 100;
         text-transform: initial;
     }
 
-    .read-more{
-        font-size: 13px;
+    .sponsored-h3-more-arrow{
+        font-size: 22px;
+        line-height: 28px;
+        padding-left: $padding / 2;
     }
 
     .article-page-list-item > *{
         background-color: $slate-grey;
-        border-top: 1px solid $dark-grey;
-        border-bottom: 1px solid $dark-grey;
-        flex-direction: row-reverse;
-        padding-top: $padding * 2;
-        padding-right: $padding * 2;
-        padding-left: $padding * 2;
 
         .article-meta{
             padding-top: 0;
@@ -326,17 +335,44 @@ img {
     .published-date--index{
         color: $darker-grey;
     }
+
+    + .widget{
+        margin-top: $margin * 3;
+    }
 }
 
-.post-picks{
-    .section-title{
+.article-page-lists-2col{
+    .sponsored-h3-more{
         color: $link;
-        margin-bottom: $margin;
+        font-family: $millerdisplay-italic;
+        font-size: 15px;
     }
+}
+
+.sponsored-1-article{
+    border-top: none;
 
     .article-page-list-item > *{
-        &:nth-last-child(2){
-            border-bottom: none;
-        }
+        border-top: 1px solid $dark-grey;
+        border-bottom: 1px solid $dark-grey;
+        flex-direction: row-reverse;
+        padding-top: $padding * 2;
+        padding-right: $padding * 2;
+        padding-left: $padding * 2;
+    }
+
+}
+
+.sponsored-lists{
+    .article-page-list-item > *{
+        border-top-color: $dark-grey;
+    }
+
+    .article-meta{
+        padding-left: $padding * 2;
+    }
+
+    .article-img{
+        padding-right: $padding * 2;
     }
 }
